@@ -1,0 +1,3734 @@
+<?xml version="1.0"?>
+<DSCronos>
+  <xs:schema id="DSCronos" targetNamespace="http://tempuri.org/DSCronos.xsd" xmlns:mstns="http://tempuri.org/DSCronos.xsd" xmlns="http://tempuri.org/DSCronos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DSCronos" msdata:IsDataSet="true" msdata:Locale="en-US">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Cruce">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_Cruce" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="No" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="ID_ModOperacion" type="xs:int" minOccurs="0" />
+                <xs:element name="Dir" type="xs:string" minOccurs="0" />
+                <xs:element name="ID_Equipo" type="xs:int" minOccurs="0" />
+                <xs:element name="FD" type="xs:double" minOccurs="0" />
+                <xs:element name="Cod" type="xs:int" minOccurs="0" />
+                <xs:element name="Activo" type="xs:boolean" minOccurs="0" />
+                <xs:element name="PlanConexion" type="xs:boolean" default="false" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="GrupoAmigo">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_GrupoAmigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="ID_Grupo1" type="xs:int" minOccurs="0" />
+                <xs:element name="ID_Grupo2" type="xs:int" minOccurs="0" />
+                <xs:element name="ID_Estructura" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Grupo">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_Grupo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="No" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="DestelloRojo" type="xs:boolean" minOccurs="0" />
+                <xs:element name="DestelloAmarillo" type="xs:boolean" minOccurs="0" />
+                <xs:element name="ID_Cruce" type="xs:int" minOccurs="0" />
+                <xs:element name="ID_TipoGrupo" type="xs:int" minOccurs="0" />
+                <xs:element name="TVConexion" type="xs:int" default="0" />
+                <xs:element name="FlujoActivo" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="Flujo" type="xs:int" default="-1" minOccurs="0" />
+                <xs:element name="TipoFlujo" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="ValorMaximo" type="xs:int" default="0" minOccurs="0" />
+                <xs:element name="ValorMinimo" type="xs:int" default="0" minOccurs="0" />
+                <xs:element name="ID_Plan" type="xs:int" default="-1" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Estado">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_Estado" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="TIRA" type="xs:int" minOccurs="0" />
+                <xs:element name="TFRA" type="xs:int" minOccurs="0" />
+                <xs:element name="TIV" type="xs:int" minOccurs="0" />
+                <xs:element name="TFV" type="xs:int" minOccurs="0" />
+                <xs:element name="TIA" type="xs:int" minOccurs="0" />
+                <xs:element name="TFA" type="xs:int" minOccurs="0" />
+                <xs:element name="ID_Plan" type="xs:int" minOccurs="0" />
+                <xs:element name="ID_Grupo" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Plan">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_Plan" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="No" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="SS" type="xs:int" minOccurs="0" />
+                <xs:element name="SC" type="xs:int" minOccurs="0" />
+                <xs:element name="ID_Estructura" type="xs:int" minOccurs="0" />
+                <xs:element name="DC" type="xs:int" minOccurs="0" />
+                <xs:element name="MaxVehiculos" type="xs:int" default="0" />
+                <xs:element name="Retardo" type="xs:int" default="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Senales">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_Senales" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Parada" type="xs:int" minOccurs="0" />
+                <xs:element name="Avance" type="xs:int" minOccurs="0" />
+                <xs:element name="ID_Plan" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Equipo">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_Equipo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Cod" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="IP_Central" type="xs:string" minOccurs="0" />
+                <xs:element name="ID_Depto" type="xs:int" minOccurs="0" />
+                <xs:element name="ID_Ciudad" type="xs:int" minOccurs="0" />
+                <xs:element name="Dir" type="xs:string" minOccurs="0" />
+                <xs:element name="ClaveTiempo" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="MiniCova" type="xs:boolean" default="false" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="HVentilador">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_HVentilador" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="H_Inicio" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="H_Fin" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ID_Equipo" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="HPlan">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_HPlan" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="H_Inicio" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="H_Fin" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ID_Plan" type="xs:int" minOccurs="0" />
+                <xs:element name="Lunes" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Martes" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Miercoles" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Jueves" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Viernes" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Sabado" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Domingo" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Festivo" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TIntermedio">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_TIntermedio" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="ID_Grupo1" type="xs:int" minOccurs="0" />
+                <xs:element name="ID_Grupo2" type="xs:int" minOccurs="0" />
+                <xs:element name="Tiempo" type="xs:int" minOccurs="0" />
+                <xs:element name="BTiempo" type="xs:boolean" minOccurs="0" />
+                <xs:element name="ID_Estructura" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Estructura">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_Estructura" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="No" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="TRA" type="xs:int" minOccurs="0" />
+                <xs:element name="BTRA" type="xs:boolean" minOccurs="0" />
+                <xs:element name="TA" type="xs:int" minOccurs="0" />
+                <xs:element name="BTA" type="xs:boolean" minOccurs="0" />
+                <xs:element name="ID_Cruce" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Evento">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_Evento" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="CodEquipo" type="xs:int" minOccurs="0" />
+                <xs:element name="CodCruce" type="xs:int" minOccurs="0" />
+                <xs:element name="TipoEvento" type="xs:int" minOccurs="0" />
+                <xs:element name="NoGrupo1" type="xs:int" minOccurs="0" />
+                <xs:element name="NoGrupo2" type="xs:int" minOccurs="0" />
+                <xs:element name="FechaHora" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ID_Equipo" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Configuracion">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Version" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="GrupoInventario">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_Tarjeta" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+                <xs:element name="Presente" type="xs:boolean" minOccurs="0" />
+                <xs:element name="ID_Equipo" type="xs:int" minOccurs="0" />
+                <xs:element name="Grupos" type="xs:string" minOccurs="0" />
+                <xs:element name="PrimerGrupo" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="DispostivoBT">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_DispostivoBT" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+                <xs:element name="NombreBT" type="xs:string" minOccurs="0" />
+                <xs:element name="ID_Equipo" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Contador">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID_Contador" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+                <xs:element name="No" type="xs:int" default="-1" minOccurs="0" />
+                <xs:element name="Positivo" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="ID_Grupo" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="DSCronosKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Cruce" />
+        <xs:field xpath="mstns:ID_Cruce" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey8" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:GrupoAmigo" />
+        <xs:field xpath="mstns:ID_GrupoAmigo" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey3" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Grupo" />
+        <xs:field xpath="mstns:ID_Grupo" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey4" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Estado" />
+        <xs:field xpath="mstns:ID_Estado" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey2" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Plan" />
+        <xs:field xpath="mstns:ID_Plan" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey7" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Senales" />
+        <xs:field xpath="mstns:ID_Senales" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey9" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Equipo" />
+        <xs:field xpath="mstns:ID_Equipo" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey10" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:HVentilador" />
+        <xs:field xpath="mstns:ID_HVentilador" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey5" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:HPlan" />
+        <xs:field xpath="mstns:ID_HPlan" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey6" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TIntermedio" />
+        <xs:field xpath="mstns:ID_TIntermedio" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey11" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Estructura" />
+        <xs:field xpath="mstns:ID_Estructura" />
+      </xs:unique>
+      <xs:unique name="DSCronosKey12" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Evento" />
+        <xs:field xpath="mstns:ID_Evento" />
+      </xs:unique>
+      <xs:unique name="DispostivoBTKey1">
+        <xs:selector xpath=".//mstns:DispostivoBT" />
+        <xs:field xpath="mstns:ID_DispostivoBT" />
+      </xs:unique>
+      <xs:unique name="ContadorKey1">
+        <xs:selector xpath=".//mstns:Contador" />
+        <xs:field xpath="mstns:ID_Contador" />
+      </xs:unique>
+      <xs:keyref name="EquipoEvento" refer="DSCronosKey9">
+        <xs:selector xpath=".//mstns:Evento" />
+        <xs:field xpath="mstns:ID_Equipo" />
+      </xs:keyref>
+      <xs:keyref name="CruceEstructura" refer="DSCronosKey1">
+        <xs:selector xpath=".//mstns:Estructura" />
+        <xs:field xpath="mstns:ID_Cruce" />
+      </xs:keyref>
+      <xs:keyref name="EstructuraTIntermedio" refer="DSCronosKey11">
+        <xs:selector xpath=".//mstns:TIntermedio" />
+        <xs:field xpath="mstns:ID_Estructura" />
+      </xs:keyref>
+      <xs:keyref name="PlanHPlan" refer="DSCronosKey2">
+        <xs:selector xpath=".//mstns:HPlan" />
+        <xs:field xpath="mstns:ID_Plan" />
+      </xs:keyref>
+      <xs:keyref name="EquipoHVentilador" refer="DSCronosKey9">
+        <xs:selector xpath=".//mstns:HVentilador" />
+        <xs:field xpath="mstns:ID_Equipo" />
+      </xs:keyref>
+      <xs:keyref name="PlanSenales" refer="DSCronosKey2">
+        <xs:selector xpath=".//mstns:Senales" />
+        <xs:field xpath="mstns:ID_Plan" />
+      </xs:keyref>
+      <xs:keyref name="EstructuraPlan" refer="DSCronosKey11">
+        <xs:selector xpath=".//mstns:Plan" />
+        <xs:field xpath="mstns:ID_Estructura" />
+      </xs:keyref>
+      <xs:keyref name="GrupoEstado" refer="DSCronosKey3">
+        <xs:selector xpath=".//mstns:Estado" />
+        <xs:field xpath="mstns:ID_Grupo" />
+      </xs:keyref>
+      <xs:keyref name="PlanEstado" refer="DSCronosKey2">
+        <xs:selector xpath=".//mstns:Estado" />
+        <xs:field xpath="mstns:ID_Plan" />
+      </xs:keyref>
+      <xs:keyref name="CruceGrupo" refer="DSCronosKey1">
+        <xs:selector xpath=".//mstns:Grupo" />
+        <xs:field xpath="mstns:ID_Cruce" />
+      </xs:keyref>
+      <xs:keyref name="EstructuraGrupoAmigo" refer="DSCronosKey11">
+        <xs:selector xpath=".//mstns:GrupoAmigo" />
+        <xs:field xpath="mstns:ID_Estructura" />
+      </xs:keyref>
+      <xs:keyref name="EquipoCruce" refer="DSCronosKey9">
+        <xs:selector xpath=".//mstns:Cruce" />
+        <xs:field xpath="mstns:ID_Equipo" />
+      </xs:keyref>
+    </xs:element>
+    <xs:annotation>
+      <xs:appinfo>
+        <msdata:Relationship name="Equipo_GrupoInventario" msdata:parent="Equipo" msdata:child="GrupoInventario" msdata:parentkey="ID_Equipo" msdata:childkey="ID_Equipo" />
+        <msdata:Relationship name="Equipo_DispostivoBT" msdata:parent="Equipo" msdata:child="DispostivoBT" msdata:parentkey="ID_Equipo" msdata:childkey="ID_Equipo" />
+        <msdata:Relationship name="Grupo_Contador" msdata:parent="Grupo" msdata:child="Contador" msdata:parentkey="ID_Grupo" msdata:childkey="ID_Grupo" />
+        <msdata:Relationship name="Grupo_Plan" msdata:parent="Plan" msdata:child="Grupo" msdata:parentkey="ID_Plan" msdata:childkey="ID_Plan" />
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:schema>
+  <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+    <DSCronos xmlns="http://tempuri.org/DSCronos.xsd">
+      <Cruce diffgr:id="Cruce2" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_Cruce>33</ID_Cruce>
+        <No>1</No>
+        <Nombre>Cruce 1</Nombre>
+        <ID_ModOperacion>1</ID_ModOperacion>
+        <Dir />
+        <ID_Equipo>10</ID_Equipo>
+        <FD>500</FD>
+        <Cod>2121</Cod>
+        <Activo>true</Activo>
+        <PlanConexion>false</PlanConexion>
+      </Cruce>
+      <GrupoAmigo diffgr:id="GrupoAmigo13" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>12</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>10</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo14" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>13</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>11</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo15" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>14</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>12</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo16" msdata:rowOrder="3" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>15</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>13</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo17" msdata:rowOrder="4" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>16</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>14</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo18" msdata:rowOrder="5" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>17</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>15</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo19" msdata:rowOrder="6" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>18</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>16</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo20" msdata:rowOrder="7" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>19</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>17</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo21" msdata:rowOrder="8" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>20</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>18</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo22" msdata:rowOrder="9" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>21</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>19</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo23" msdata:rowOrder="10" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>22</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>20</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo24" msdata:rowOrder="11" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>23</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>21</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo25" msdata:rowOrder="12" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>24</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>22</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo26" msdata:rowOrder="13" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>25</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>23</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo27" msdata:rowOrder="14" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>26</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>24</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo28" msdata:rowOrder="15" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>27</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>25</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo29" msdata:rowOrder="16" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>28</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>26</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo30" msdata:rowOrder="17" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>29</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo31" msdata:rowOrder="18" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>30</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo32" msdata:rowOrder="19" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>31</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo33" msdata:rowOrder="20" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>32</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo34" msdata:rowOrder="21" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>33</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo35" msdata:rowOrder="22" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>34</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo36" msdata:rowOrder="23" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>35</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo37" msdata:rowOrder="24" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>36</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo38" msdata:rowOrder="25" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>37</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo39" msdata:rowOrder="26" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>38</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo40" msdata:rowOrder="27" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>39</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo41" msdata:rowOrder="28" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>40</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo42" msdata:rowOrder="29" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>41</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo43" msdata:rowOrder="30" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>42</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>10</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo44" msdata:rowOrder="31" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>43</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>11</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo45" msdata:rowOrder="32" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>44</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>12</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo46" msdata:rowOrder="33" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>45</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>13</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo47" msdata:rowOrder="34" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>46</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>14</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo48" msdata:rowOrder="35" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>47</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>15</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo49" msdata:rowOrder="36" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>48</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>16</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo50" msdata:rowOrder="37" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>49</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>17</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo51" msdata:rowOrder="38" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>50</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>18</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo52" msdata:rowOrder="39" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>51</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>19</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo53" msdata:rowOrder="40" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>52</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>20</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo54" msdata:rowOrder="41" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>53</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>21</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo55" msdata:rowOrder="42" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>54</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>22</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo56" msdata:rowOrder="43" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>55</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>23</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo57" msdata:rowOrder="44" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>56</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>24</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo58" msdata:rowOrder="45" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>57</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>25</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo59" msdata:rowOrder="46" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>58</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>26</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo60" msdata:rowOrder="47" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>59</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo61" msdata:rowOrder="48" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>60</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo62" msdata:rowOrder="49" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>61</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo63" msdata:rowOrder="50" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>62</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo64" msdata:rowOrder="51" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>63</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo65" msdata:rowOrder="52" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>64</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo66" msdata:rowOrder="53" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>65</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo67" msdata:rowOrder="54" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>66</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo68" msdata:rowOrder="55" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>67</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo69" msdata:rowOrder="56" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>68</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo70" msdata:rowOrder="57" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>69</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo71" msdata:rowOrder="58" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>70</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo72" msdata:rowOrder="59" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>71</ID_GrupoAmigo>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo73" msdata:rowOrder="60" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>72</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>11</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo74" msdata:rowOrder="61" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>73</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>12</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo75" msdata:rowOrder="62" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>74</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>13</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo76" msdata:rowOrder="63" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>75</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>14</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo77" msdata:rowOrder="64" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>76</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>15</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo78" msdata:rowOrder="65" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>77</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>16</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo79" msdata:rowOrder="66" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>78</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>17</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo80" msdata:rowOrder="67" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>79</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo81" msdata:rowOrder="68" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>80</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo82" msdata:rowOrder="69" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>81</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo83" msdata:rowOrder="70" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>82</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo84" msdata:rowOrder="71" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>83</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo85" msdata:rowOrder="72" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>84</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo86" msdata:rowOrder="73" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>85</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo87" msdata:rowOrder="74" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>86</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo88" msdata:rowOrder="75" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>87</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo89" msdata:rowOrder="76" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>88</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo90" msdata:rowOrder="77" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>89</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo91" msdata:rowOrder="78" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>90</ID_GrupoAmigo>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo92" msdata:rowOrder="79" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>91</ID_GrupoAmigo>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>12</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo93" msdata:rowOrder="80" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>92</ID_GrupoAmigo>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>13</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo94" msdata:rowOrder="81" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>93</ID_GrupoAmigo>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>14</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo95" msdata:rowOrder="82" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>94</ID_GrupoAmigo>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>15</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo96" msdata:rowOrder="83" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>95</ID_GrupoAmigo>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>16</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo97" msdata:rowOrder="84" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>96</ID_GrupoAmigo>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>17</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo98" msdata:rowOrder="85" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>97</ID_GrupoAmigo>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo99" msdata:rowOrder="86" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>98</ID_GrupoAmigo>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo100" msdata:rowOrder="87" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>99</ID_GrupoAmigo>
+        <ID_Grupo1>12</ID_Grupo1>
+        <ID_Grupo2>13</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo101" msdata:rowOrder="88" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>100</ID_GrupoAmigo>
+        <ID_Grupo1>12</ID_Grupo1>
+        <ID_Grupo2>14</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo102" msdata:rowOrder="89" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>101</ID_GrupoAmigo>
+        <ID_Grupo1>12</ID_Grupo1>
+        <ID_Grupo2>15</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo103" msdata:rowOrder="90" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>102</ID_GrupoAmigo>
+        <ID_Grupo1>12</ID_Grupo1>
+        <ID_Grupo2>16</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo104" msdata:rowOrder="91" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>103</ID_GrupoAmigo>
+        <ID_Grupo1>12</ID_Grupo1>
+        <ID_Grupo2>17</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo105" msdata:rowOrder="92" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>104</ID_GrupoAmigo>
+        <ID_Grupo1>13</ID_Grupo1>
+        <ID_Grupo2>14</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo106" msdata:rowOrder="93" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>105</ID_GrupoAmigo>
+        <ID_Grupo1>13</ID_Grupo1>
+        <ID_Grupo2>15</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo107" msdata:rowOrder="94" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>106</ID_GrupoAmigo>
+        <ID_Grupo1>13</ID_Grupo1>
+        <ID_Grupo2>16</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo108" msdata:rowOrder="95" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>107</ID_GrupoAmigo>
+        <ID_Grupo1>13</ID_Grupo1>
+        <ID_Grupo2>17</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo109" msdata:rowOrder="96" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>108</ID_GrupoAmigo>
+        <ID_Grupo1>14</ID_Grupo1>
+        <ID_Grupo2>15</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo110" msdata:rowOrder="97" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>109</ID_GrupoAmigo>
+        <ID_Grupo1>14</ID_Grupo1>
+        <ID_Grupo2>16</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo111" msdata:rowOrder="98" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>110</ID_GrupoAmigo>
+        <ID_Grupo1>14</ID_Grupo1>
+        <ID_Grupo2>17</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo112" msdata:rowOrder="99" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>111</ID_GrupoAmigo>
+        <ID_Grupo1>15</ID_Grupo1>
+        <ID_Grupo2>16</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo113" msdata:rowOrder="100" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>112</ID_GrupoAmigo>
+        <ID_Grupo1>15</ID_Grupo1>
+        <ID_Grupo2>17</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo114" msdata:rowOrder="101" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>113</ID_GrupoAmigo>
+        <ID_Grupo1>16</ID_Grupo1>
+        <ID_Grupo2>17</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo115" msdata:rowOrder="102" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>114</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>19</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo116" msdata:rowOrder="103" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>115</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>20</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo117" msdata:rowOrder="104" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>116</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>21</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo118" msdata:rowOrder="105" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>117</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>22</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo119" msdata:rowOrder="106" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>118</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>23</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo120" msdata:rowOrder="107" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>119</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>24</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo121" msdata:rowOrder="108" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>120</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>25</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo122" msdata:rowOrder="109" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>121</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>26</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo123" msdata:rowOrder="110" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>122</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo124" msdata:rowOrder="111" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>123</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo125" msdata:rowOrder="112" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>124</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo126" msdata:rowOrder="113" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>125</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo127" msdata:rowOrder="114" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>126</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo128" msdata:rowOrder="115" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>127</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo129" msdata:rowOrder="116" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>128</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo130" msdata:rowOrder="117" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>129</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo131" msdata:rowOrder="118" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>130</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo132" msdata:rowOrder="119" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>131</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo133" msdata:rowOrder="120" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>132</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo134" msdata:rowOrder="121" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>133</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo135" msdata:rowOrder="122" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>134</ID_GrupoAmigo>
+        <ID_Grupo1>18</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo136" msdata:rowOrder="123" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>135</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>20</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo137" msdata:rowOrder="124" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>136</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>21</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo138" msdata:rowOrder="125" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>137</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>22</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo139" msdata:rowOrder="126" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>138</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>23</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo140" msdata:rowOrder="127" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>139</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>24</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo141" msdata:rowOrder="128" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>140</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>25</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo142" msdata:rowOrder="129" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>141</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>26</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo143" msdata:rowOrder="130" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>142</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo144" msdata:rowOrder="131" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>143</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo145" msdata:rowOrder="132" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>144</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo146" msdata:rowOrder="133" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>145</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo147" msdata:rowOrder="134" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>146</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo148" msdata:rowOrder="135" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>147</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo149" msdata:rowOrder="136" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>148</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo150" msdata:rowOrder="137" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>149</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo151" msdata:rowOrder="138" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>150</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo152" msdata:rowOrder="139" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>151</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo153" msdata:rowOrder="140" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>152</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo154" msdata:rowOrder="141" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>153</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo155" msdata:rowOrder="142" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>154</ID_GrupoAmigo>
+        <ID_Grupo1>19</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo156" msdata:rowOrder="143" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>155</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>21</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo157" msdata:rowOrder="144" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>156</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>22</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo158" msdata:rowOrder="145" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>157</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>23</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo159" msdata:rowOrder="146" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>158</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>24</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo160" msdata:rowOrder="147" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>159</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>25</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo161" msdata:rowOrder="148" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>160</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>26</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo162" msdata:rowOrder="149" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>161</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo163" msdata:rowOrder="150" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>162</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo164" msdata:rowOrder="151" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>163</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo165" msdata:rowOrder="152" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>164</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo166" msdata:rowOrder="153" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>165</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo167" msdata:rowOrder="154" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>166</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo168" msdata:rowOrder="155" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>167</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo169" msdata:rowOrder="156" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>168</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo170" msdata:rowOrder="157" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>169</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo171" msdata:rowOrder="158" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>170</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo172" msdata:rowOrder="159" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>171</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo173" msdata:rowOrder="160" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>172</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo174" msdata:rowOrder="161" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>173</ID_GrupoAmigo>
+        <ID_Grupo1>20</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo175" msdata:rowOrder="162" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>174</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>22</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo176" msdata:rowOrder="163" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>175</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>23</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo177" msdata:rowOrder="164" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>176</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>24</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo178" msdata:rowOrder="165" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>177</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>25</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo179" msdata:rowOrder="166" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>178</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>26</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo180" msdata:rowOrder="167" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>179</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo181" msdata:rowOrder="168" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>180</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo182" msdata:rowOrder="169" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>181</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo183" msdata:rowOrder="170" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>182</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo184" msdata:rowOrder="171" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>183</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo185" msdata:rowOrder="172" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>184</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo186" msdata:rowOrder="173" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>185</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo187" msdata:rowOrder="174" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>186</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo188" msdata:rowOrder="175" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>187</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo189" msdata:rowOrder="176" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>188</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo190" msdata:rowOrder="177" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>189</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo191" msdata:rowOrder="178" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>190</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo192" msdata:rowOrder="179" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>191</ID_GrupoAmigo>
+        <ID_Grupo1>21</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo193" msdata:rowOrder="180" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>192</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>23</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo194" msdata:rowOrder="181" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>193</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>24</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo195" msdata:rowOrder="182" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>194</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>25</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo196" msdata:rowOrder="183" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>195</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>26</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo197" msdata:rowOrder="184" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>196</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo198" msdata:rowOrder="185" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>197</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo199" msdata:rowOrder="186" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>198</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo200" msdata:rowOrder="187" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>199</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo201" msdata:rowOrder="188" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>200</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo202" msdata:rowOrder="189" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>201</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo203" msdata:rowOrder="190" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>202</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo204" msdata:rowOrder="191" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>203</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo205" msdata:rowOrder="192" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>204</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo206" msdata:rowOrder="193" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>205</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo207" msdata:rowOrder="194" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>206</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo208" msdata:rowOrder="195" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>207</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo209" msdata:rowOrder="196" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>208</ID_GrupoAmigo>
+        <ID_Grupo1>22</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo210" msdata:rowOrder="197" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>209</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>24</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo211" msdata:rowOrder="198" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>210</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>25</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo212" msdata:rowOrder="199" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>211</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>26</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo213" msdata:rowOrder="200" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>212</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo214" msdata:rowOrder="201" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>213</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo215" msdata:rowOrder="202" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>214</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo216" msdata:rowOrder="203" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>215</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo217" msdata:rowOrder="204" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>216</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo218" msdata:rowOrder="205" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>217</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo219" msdata:rowOrder="206" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>218</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo220" msdata:rowOrder="207" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>219</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo221" msdata:rowOrder="208" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>220</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo222" msdata:rowOrder="209" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>221</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo223" msdata:rowOrder="210" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>222</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo224" msdata:rowOrder="211" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>223</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo225" msdata:rowOrder="212" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>224</ID_GrupoAmigo>
+        <ID_Grupo1>23</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo226" msdata:rowOrder="213" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>225</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>25</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo227" msdata:rowOrder="214" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>226</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>26</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo228" msdata:rowOrder="215" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>227</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo229" msdata:rowOrder="216" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>228</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo230" msdata:rowOrder="217" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>229</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo231" msdata:rowOrder="218" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>230</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo232" msdata:rowOrder="219" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>231</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo233" msdata:rowOrder="220" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>232</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo234" msdata:rowOrder="221" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>233</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo235" msdata:rowOrder="222" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>234</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo236" msdata:rowOrder="223" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>235</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo237" msdata:rowOrder="224" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>236</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo238" msdata:rowOrder="225" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>237</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo239" msdata:rowOrder="226" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>238</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo240" msdata:rowOrder="227" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>239</ID_GrupoAmigo>
+        <ID_Grupo1>24</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo241" msdata:rowOrder="228" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>240</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>26</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo242" msdata:rowOrder="229" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>241</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo243" msdata:rowOrder="230" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>242</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo244" msdata:rowOrder="231" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>243</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo245" msdata:rowOrder="232" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>244</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo246" msdata:rowOrder="233" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>245</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo247" msdata:rowOrder="234" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>246</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo248" msdata:rowOrder="235" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>247</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo249" msdata:rowOrder="236" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>248</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo250" msdata:rowOrder="237" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>249</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo251" msdata:rowOrder="238" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>250</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo252" msdata:rowOrder="239" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>251</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo253" msdata:rowOrder="240" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>252</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo254" msdata:rowOrder="241" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>253</ID_GrupoAmigo>
+        <ID_Grupo1>25</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo255" msdata:rowOrder="242" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>254</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>27</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo256" msdata:rowOrder="243" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>255</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo257" msdata:rowOrder="244" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>256</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo258" msdata:rowOrder="245" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>257</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo259" msdata:rowOrder="246" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>258</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo260" msdata:rowOrder="247" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>259</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo261" msdata:rowOrder="248" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>260</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo262" msdata:rowOrder="249" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>261</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo263" msdata:rowOrder="250" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>262</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo264" msdata:rowOrder="251" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>263</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo265" msdata:rowOrder="252" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>264</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo266" msdata:rowOrder="253" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>265</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo267" msdata:rowOrder="254" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>266</ID_GrupoAmigo>
+        <ID_Grupo1>26</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo268" msdata:rowOrder="255" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>267</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>28</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo269" msdata:rowOrder="256" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>268</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo270" msdata:rowOrder="257" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>269</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo271" msdata:rowOrder="258" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>270</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo272" msdata:rowOrder="259" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>271</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo273" msdata:rowOrder="260" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>272</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo274" msdata:rowOrder="261" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>273</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo275" msdata:rowOrder="262" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>274</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo276" msdata:rowOrder="263" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>275</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo277" msdata:rowOrder="264" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>276</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo278" msdata:rowOrder="265" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>277</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo279" msdata:rowOrder="266" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>278</ID_GrupoAmigo>
+        <ID_Grupo1>27</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo280" msdata:rowOrder="267" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>279</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>29</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo281" msdata:rowOrder="268" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>280</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo282" msdata:rowOrder="269" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>281</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo283" msdata:rowOrder="270" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>282</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo284" msdata:rowOrder="271" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>283</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo285" msdata:rowOrder="272" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>284</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo286" msdata:rowOrder="273" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>285</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo287" msdata:rowOrder="274" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>286</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo288" msdata:rowOrder="275" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>287</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo289" msdata:rowOrder="276" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>288</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo290" msdata:rowOrder="277" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>289</ID_GrupoAmigo>
+        <ID_Grupo1>28</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo291" msdata:rowOrder="278" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>290</ID_GrupoAmigo>
+        <ID_Grupo1>29</ID_Grupo1>
+        <ID_Grupo2>30</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo292" msdata:rowOrder="279" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>291</ID_GrupoAmigo>
+        <ID_Grupo1>29</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo293" msdata:rowOrder="280" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>292</ID_GrupoAmigo>
+        <ID_Grupo1>29</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo294" msdata:rowOrder="281" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>293</ID_GrupoAmigo>
+        <ID_Grupo1>29</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo295" msdata:rowOrder="282" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>294</ID_GrupoAmigo>
+        <ID_Grupo1>29</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo296" msdata:rowOrder="283" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>295</ID_GrupoAmigo>
+        <ID_Grupo1>29</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo297" msdata:rowOrder="284" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>296</ID_GrupoAmigo>
+        <ID_Grupo1>29</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo298" msdata:rowOrder="285" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>297</ID_GrupoAmigo>
+        <ID_Grupo1>29</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo299" msdata:rowOrder="286" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>298</ID_GrupoAmigo>
+        <ID_Grupo1>29</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo300" msdata:rowOrder="287" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>299</ID_GrupoAmigo>
+        <ID_Grupo1>29</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo301" msdata:rowOrder="288" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>300</ID_GrupoAmigo>
+        <ID_Grupo1>30</ID_Grupo1>
+        <ID_Grupo2>31</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo302" msdata:rowOrder="289" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>301</ID_GrupoAmigo>
+        <ID_Grupo1>30</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo303" msdata:rowOrder="290" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>302</ID_GrupoAmigo>
+        <ID_Grupo1>30</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo304" msdata:rowOrder="291" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>303</ID_GrupoAmigo>
+        <ID_Grupo1>30</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo305" msdata:rowOrder="292" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>304</ID_GrupoAmigo>
+        <ID_Grupo1>30</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo306" msdata:rowOrder="293" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>305</ID_GrupoAmigo>
+        <ID_Grupo1>30</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo307" msdata:rowOrder="294" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>306</ID_GrupoAmigo>
+        <ID_Grupo1>30</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo308" msdata:rowOrder="295" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>307</ID_GrupoAmigo>
+        <ID_Grupo1>30</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo309" msdata:rowOrder="296" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>308</ID_GrupoAmigo>
+        <ID_Grupo1>30</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo310" msdata:rowOrder="297" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>309</ID_GrupoAmigo>
+        <ID_Grupo1>31</ID_Grupo1>
+        <ID_Grupo2>32</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo311" msdata:rowOrder="298" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>310</ID_GrupoAmigo>
+        <ID_Grupo1>31</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo312" msdata:rowOrder="299" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>311</ID_GrupoAmigo>
+        <ID_Grupo1>31</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo313" msdata:rowOrder="300" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>312</ID_GrupoAmigo>
+        <ID_Grupo1>31</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo314" msdata:rowOrder="301" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>313</ID_GrupoAmigo>
+        <ID_Grupo1>31</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo315" msdata:rowOrder="302" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>314</ID_GrupoAmigo>
+        <ID_Grupo1>31</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo316" msdata:rowOrder="303" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>315</ID_GrupoAmigo>
+        <ID_Grupo1>31</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo317" msdata:rowOrder="304" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>316</ID_GrupoAmigo>
+        <ID_Grupo1>31</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo318" msdata:rowOrder="305" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>317</ID_GrupoAmigo>
+        <ID_Grupo1>32</ID_Grupo1>
+        <ID_Grupo2>33</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo319" msdata:rowOrder="306" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>318</ID_GrupoAmigo>
+        <ID_Grupo1>32</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo320" msdata:rowOrder="307" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>319</ID_GrupoAmigo>
+        <ID_Grupo1>32</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo321" msdata:rowOrder="308" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>320</ID_GrupoAmigo>
+        <ID_Grupo1>32</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo322" msdata:rowOrder="309" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>321</ID_GrupoAmigo>
+        <ID_Grupo1>32</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo323" msdata:rowOrder="310" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>322</ID_GrupoAmigo>
+        <ID_Grupo1>32</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo324" msdata:rowOrder="311" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>323</ID_GrupoAmigo>
+        <ID_Grupo1>32</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo325" msdata:rowOrder="312" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>324</ID_GrupoAmigo>
+        <ID_Grupo1>33</ID_Grupo1>
+        <ID_Grupo2>34</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo326" msdata:rowOrder="313" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>325</ID_GrupoAmigo>
+        <ID_Grupo1>33</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo327" msdata:rowOrder="314" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>326</ID_GrupoAmigo>
+        <ID_Grupo1>33</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo328" msdata:rowOrder="315" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>327</ID_GrupoAmigo>
+        <ID_Grupo1>33</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo329" msdata:rowOrder="316" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>328</ID_GrupoAmigo>
+        <ID_Grupo1>33</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo330" msdata:rowOrder="317" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>329</ID_GrupoAmigo>
+        <ID_Grupo1>33</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo331" msdata:rowOrder="318" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>330</ID_GrupoAmigo>
+        <ID_Grupo1>34</ID_Grupo1>
+        <ID_Grupo2>35</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo332" msdata:rowOrder="319" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>331</ID_GrupoAmigo>
+        <ID_Grupo1>34</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo333" msdata:rowOrder="320" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>332</ID_GrupoAmigo>
+        <ID_Grupo1>34</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo334" msdata:rowOrder="321" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>333</ID_GrupoAmigo>
+        <ID_Grupo1>34</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo335" msdata:rowOrder="322" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>334</ID_GrupoAmigo>
+        <ID_Grupo1>34</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo336" msdata:rowOrder="323" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>335</ID_GrupoAmigo>
+        <ID_Grupo1>35</ID_Grupo1>
+        <ID_Grupo2>36</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo337" msdata:rowOrder="324" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>336</ID_GrupoAmigo>
+        <ID_Grupo1>35</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo338" msdata:rowOrder="325" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>337</ID_GrupoAmigo>
+        <ID_Grupo1>35</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo339" msdata:rowOrder="326" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>338</ID_GrupoAmigo>
+        <ID_Grupo1>35</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo340" msdata:rowOrder="327" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>339</ID_GrupoAmigo>
+        <ID_Grupo1>36</ID_Grupo1>
+        <ID_Grupo2>37</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo341" msdata:rowOrder="328" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>340</ID_GrupoAmigo>
+        <ID_Grupo1>36</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo342" msdata:rowOrder="329" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>341</ID_GrupoAmigo>
+        <ID_Grupo1>36</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo343" msdata:rowOrder="330" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>342</ID_GrupoAmigo>
+        <ID_Grupo1>37</ID_Grupo1>
+        <ID_Grupo2>38</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo344" msdata:rowOrder="331" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>343</ID_GrupoAmigo>
+        <ID_Grupo1>37</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <GrupoAmigo diffgr:id="GrupoAmigo345" msdata:rowOrder="332" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>344</ID_GrupoAmigo>
+        <ID_Grupo1>38</ID_Grupo1>
+        <ID_Grupo2>39</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo>
+      <Grupo diffgr:id="Grupo9" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_Grupo>8</ID_Grupo>
+        <No>1</No>
+        <Nombre>Grupo 1</Nombre>
+        <DestelloRojo>false</DestelloRojo>
+        <DestelloAmarillo>true</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>0</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>180</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo10" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+        <ID_Grupo>9</ID_Grupo>
+        <No>2</No>
+        <Nombre>Grupo 2</Nombre>
+        <DestelloRojo>false</DestelloRojo>
+        <DestelloAmarillo>true</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>0</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>181</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo11" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+        <ID_Grupo>10</ID_Grupo>
+        <No>3</No>
+        <Nombre>Grupo 3</Nombre>
+        <DestelloRojo>false</DestelloRojo>
+        <DestelloAmarillo>true</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>0</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>182</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo12" msdata:rowOrder="3" diffgr:hasChanges="inserted">
+        <ID_Grupo>11</ID_Grupo>
+        <No>4</No>
+        <Nombre>Grupo 4</Nombre>
+        <DestelloRojo>false</DestelloRojo>
+        <DestelloAmarillo>true</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>0</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>183</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo13" msdata:rowOrder="4" diffgr:hasChanges="inserted">
+        <ID_Grupo>12</ID_Grupo>
+        <No>5</No>
+        <Nombre>Grupo 5</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>0</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>184</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo14" msdata:rowOrder="5" diffgr:hasChanges="inserted">
+        <ID_Grupo>13</ID_Grupo>
+        <No>6</No>
+        <Nombre>Grupo 6</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>0</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>185</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo15" msdata:rowOrder="6" diffgr:hasChanges="inserted">
+        <ID_Grupo>14</ID_Grupo>
+        <No>7</No>
+        <Nombre>Grupo 7</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>0</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>186</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo16" msdata:rowOrder="7" diffgr:hasChanges="inserted">
+        <ID_Grupo>15</ID_Grupo>
+        <No>8</No>
+        <Nombre>Grupo 8</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>0</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>187</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo17" msdata:rowOrder="8" diffgr:hasChanges="inserted">
+        <ID_Grupo>16</ID_Grupo>
+        <No>9</No>
+        <Nombre>Grupo 9</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>0</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>188</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo18" msdata:rowOrder="9" diffgr:hasChanges="inserted">
+        <ID_Grupo>17</ID_Grupo>
+        <No>10</No>
+        <Nombre>Grupo 10</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>189</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo19" msdata:rowOrder="10" diffgr:hasChanges="inserted">
+        <ID_Grupo>18</ID_Grupo>
+        <No>11</No>
+        <Nombre>Grupo 11</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>190</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo20" msdata:rowOrder="11" diffgr:hasChanges="inserted">
+        <ID_Grupo>19</ID_Grupo>
+        <No>12</No>
+        <Nombre>Grupo 12</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>191</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo21" msdata:rowOrder="12" diffgr:hasChanges="inserted">
+        <ID_Grupo>20</ID_Grupo>
+        <No>13</No>
+        <Nombre>Grupo 13</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>192</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo22" msdata:rowOrder="13" diffgr:hasChanges="inserted">
+        <ID_Grupo>21</ID_Grupo>
+        <No>14</No>
+        <Nombre>Grupo 14</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>193</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo23" msdata:rowOrder="14" diffgr:hasChanges="inserted">
+        <ID_Grupo>22</ID_Grupo>
+        <No>15</No>
+        <Nombre>Grupo 15</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>194</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo24" msdata:rowOrder="15" diffgr:hasChanges="inserted">
+        <ID_Grupo>23</ID_Grupo>
+        <No>16</No>
+        <Nombre>Grupo 16</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>195</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo25" msdata:rowOrder="16" diffgr:hasChanges="inserted">
+        <ID_Grupo>24</ID_Grupo>
+        <No>17</No>
+        <Nombre>Grupo 17</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>196</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo26" msdata:rowOrder="17" diffgr:hasChanges="inserted">
+        <ID_Grupo>25</ID_Grupo>
+        <No>18</No>
+        <Nombre>Grupo 18</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>197</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo27" msdata:rowOrder="18" diffgr:hasChanges="inserted">
+        <ID_Grupo>26</ID_Grupo>
+        <No>19</No>
+        <Nombre>Grupo 19</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>198</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo28" msdata:rowOrder="19" diffgr:hasChanges="inserted">
+        <ID_Grupo>27</ID_Grupo>
+        <No>20</No>
+        <Nombre>Grupo 20</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>199</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo29" msdata:rowOrder="20" diffgr:hasChanges="inserted">
+        <ID_Grupo>28</ID_Grupo>
+        <No>21</No>
+        <Nombre>Grupo 21</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>200</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo30" msdata:rowOrder="21" diffgr:hasChanges="inserted">
+        <ID_Grupo>29</ID_Grupo>
+        <No>22</No>
+        <Nombre>Grupo 22</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>201</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo31" msdata:rowOrder="22" diffgr:hasChanges="inserted">
+        <ID_Grupo>30</ID_Grupo>
+        <No>23</No>
+        <Nombre>Grupo 23</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>202</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo32" msdata:rowOrder="23" diffgr:hasChanges="inserted">
+        <ID_Grupo>31</ID_Grupo>
+        <No>24</No>
+        <Nombre>Grupo 24</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>203</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo33" msdata:rowOrder="24" diffgr:hasChanges="inserted">
+        <ID_Grupo>32</ID_Grupo>
+        <No>25</No>
+        <Nombre>Grupo 25</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>204</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo34" msdata:rowOrder="25" diffgr:hasChanges="inserted">
+        <ID_Grupo>33</ID_Grupo>
+        <No>26</No>
+        <Nombre>Grupo 26</Nombre>
+        <DestelloRojo>false</DestelloRojo>
+        <DestelloAmarillo>true</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>205</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo35" msdata:rowOrder="26" diffgr:hasChanges="inserted">
+        <ID_Grupo>34</ID_Grupo>
+        <No>27</No>
+        <Nombre>Grupo 27</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>206</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo36" msdata:rowOrder="27" diffgr:hasChanges="inserted">
+        <ID_Grupo>35</ID_Grupo>
+        <No>28</No>
+        <Nombre>Grupo 28</Nombre>
+        <DestelloRojo>false</DestelloRojo>
+        <DestelloAmarillo>true</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>207</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo37" msdata:rowOrder="28" diffgr:hasChanges="inserted">
+        <ID_Grupo>36</ID_Grupo>
+        <No>29</No>
+        <Nombre>Grupo 29</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>208</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo38" msdata:rowOrder="29" diffgr:hasChanges="inserted">
+        <ID_Grupo>37</ID_Grupo>
+        <No>30</No>
+        <Nombre>Grupo 30</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>209</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo39" msdata:rowOrder="30" diffgr:hasChanges="inserted">
+        <ID_Grupo>38</ID_Grupo>
+        <No>31</No>
+        <Nombre>Grupo 31</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>210</ID_Plan>
+      </Grupo>
+      <Grupo diffgr:id="Grupo40" msdata:rowOrder="31" diffgr:hasChanges="inserted">
+        <ID_Grupo>39</ID_Grupo>
+        <No>32</No>
+        <Nombre>Grupo 32</Nombre>
+        <DestelloRojo>true</DestelloRojo>
+        <DestelloAmarillo>false</DestelloAmarillo>
+        <ID_Cruce>33</ID_Cruce>
+        <ID_TipoGrupo>1</ID_TipoGrupo>
+        <TVConexion>0</TVConexion>
+        <FlujoActivo>false</FlujoActivo>
+        <Flujo>-1</Flujo>
+        <TipoFlujo>false</TipoFlujo>
+        <ValorMaximo>0</ValorMaximo>
+        <ValorMinimo>0</ValorMinimo>
+        <ID_Plan>211</ID_Plan>
+      </Grupo>
+      <Estado diffgr:id="Estado41" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_Estado>40</ID_Estado>
+        <TIRA>30</TIRA>
+        <TFRA>32</TFRA>
+        <TIV>32</TIV>
+        <TFV>62</TFV>
+        <TIA>62</TIA>
+        <TFA>65</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>8</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado42" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+        <ID_Estado>41</ID_Estado>
+        <TIRA>80</TIRA>
+        <TFRA>82</TFRA>
+        <TIV>82</TIV>
+        <TFV>22</TFV>
+        <TIA>22</TIA>
+        <TFA>25</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>9</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado43" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+        <ID_Estado>42</ID_Estado>
+        <TIRA>80</TIRA>
+        <TFRA>82</TFRA>
+        <TIV>82</TIV>
+        <TFV>22</TFV>
+        <TIA>22</TIA>
+        <TFA>25</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>10</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado44" msdata:rowOrder="3" diffgr:hasChanges="inserted">
+        <ID_Estado>43</ID_Estado>
+        <TIRA>80</TIRA>
+        <TFRA>82</TFRA>
+        <TIV>82</TIV>
+        <TFV>22</TFV>
+        <TIA>22</TIA>
+        <TFA>25</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>11</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado45" msdata:rowOrder="4" diffgr:hasChanges="inserted">
+        <ID_Estado>44</ID_Estado>
+        <TIRA>55</TIRA>
+        <TFRA>57</TFRA>
+        <TIV>57</TIV>
+        <TFV>74</TFV>
+        <TIA>74</TIA>
+        <TFA>77</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>12</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado46" msdata:rowOrder="5" diffgr:hasChanges="inserted">
+        <ID_Estado>45</ID_Estado>
+        <TIRA>52</TIRA>
+        <TFRA>54</TFRA>
+        <TIV>54</TIV>
+        <TFV>71</TFV>
+        <TIA>71</TIA>
+        <TFA>74</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>13</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado47" msdata:rowOrder="6" diffgr:hasChanges="inserted">
+        <ID_Estado>46</ID_Estado>
+        <TIRA>55</TIRA>
+        <TFRA>57</TFRA>
+        <TIV>57</TIV>
+        <TFV>74</TFV>
+        <TIA>74</TIA>
+        <TFA>77</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>14</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado48" msdata:rowOrder="7" diffgr:hasChanges="inserted">
+        <ID_Estado>47</ID_Estado>
+        <TIRA>52</TIRA>
+        <TFRA>54</TFRA>
+        <TIV>54</TIV>
+        <TFV>71</TFV>
+        <TIA>71</TIA>
+        <TFA>74</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>15</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado49" msdata:rowOrder="8" diffgr:hasChanges="inserted">
+        <ID_Estado>48</ID_Estado>
+        <TIRA>0</TIRA>
+        <TFRA>2</TFRA>
+        <TIV>2</TIV>
+        <TFV>12</TFV>
+        <TIA>12</TIA>
+        <TFA>15</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>16</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado50" msdata:rowOrder="9" diffgr:hasChanges="inserted">
+        <ID_Estado>49</ID_Estado>
+        <TIRA>30</TIRA>
+        <TFRA>30</TFRA>
+        <TIV>30</TIV>
+        <TFV>68</TFV>
+        <TIA>68</TIA>
+        <TFA>71</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>17</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado51" msdata:rowOrder="10" diffgr:hasChanges="inserted">
+        <ID_Estado>50</ID_Estado>
+        <TIRA>30</TIRA>
+        <TFRA>30</TFRA>
+        <TIV>30</TIV>
+        <TFV>68</TFV>
+        <TIA>68</TIA>
+        <TFA>71</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>18</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado52" msdata:rowOrder="11" diffgr:hasChanges="inserted">
+        <ID_Estado>51</ID_Estado>
+        <TIRA>84</TIRA>
+        <TFRA>84</TFRA>
+        <TIV>84</TIV>
+        <TFV>45</TFV>
+        <TIA>45</TIA>
+        <TFA>48</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>19</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado53" msdata:rowOrder="12" diffgr:hasChanges="inserted">
+        <ID_Estado>52</ID_Estado>
+        <TIRA>30</TIRA>
+        <TFRA>30</TFRA>
+        <TIV>30</TIV>
+        <TFV>47</TFV>
+        <TIA>47</TIA>
+        <TFA>50</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>20</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado54" msdata:rowOrder="13" diffgr:hasChanges="inserted">
+        <ID_Estado>53</ID_Estado>
+        <TIRA>84</TIRA>
+        <TFRA>84</TFRA>
+        <TIV>84</TIV>
+        <TFV>47</TFV>
+        <TIA>47</TIA>
+        <TFA>50</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>21</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado55" msdata:rowOrder="14" diffgr:hasChanges="inserted">
+        <ID_Estado>54</ID_Estado>
+        <TIRA>84</TIRA>
+        <TFRA>84</TFRA>
+        <TIV>84</TIV>
+        <TFV>45</TFV>
+        <TIA>45</TIA>
+        <TFA>48</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>22</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado56" msdata:rowOrder="15" diffgr:hasChanges="inserted">
+        <ID_Estado>55</ID_Estado>
+        <TIRA>30</TIRA>
+        <TFRA>30</TFRA>
+        <TIV>30</TIV>
+        <TFV>47</TFV>
+        <TIA>47</TIA>
+        <TFA>50</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>23</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado57" msdata:rowOrder="16" diffgr:hasChanges="inserted">
+        <ID_Estado>56</ID_Estado>
+        <TIRA>30</TIRA>
+        <TFRA>30</TFRA>
+        <TIV>30</TIV>
+        <TFV>47</TFV>
+        <TIA>47</TIA>
+        <TFA>50</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>24</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado58" msdata:rowOrder="17" diffgr:hasChanges="inserted">
+        <ID_Estado>57</ID_Estado>
+        <TIRA>30</TIRA>
+        <TFRA>30</TFRA>
+        <TIV>30</TIV>
+        <TFV>68</TFV>
+        <TIA>68</TIA>
+        <TFA>71</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>25</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado59" msdata:rowOrder="18" diffgr:hasChanges="inserted">
+        <ID_Estado>58</ID_Estado>
+        <TIRA>0</TIRA>
+        <TFRA>0</TFRA>
+        <TIV>0</TIV>
+        <TFV>10</TFV>
+        <TIA>10</TIA>
+        <TFA>13</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>26</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado60" msdata:rowOrder="19" diffgr:hasChanges="inserted">
+        <ID_Estado>59</ID_Estado>
+        <TIRA>0</TIRA>
+        <TFRA>0</TFRA>
+        <TIV>0</TIV>
+        <TFV>10</TFV>
+        <TIA>10</TIA>
+        <TFA>13</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>27</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado61" msdata:rowOrder="20" diffgr:hasChanges="inserted">
+        <ID_Estado>60</ID_Estado>
+        <TIRA>0</TIRA>
+        <TFRA>0</TFRA>
+        <TIV>0</TIV>
+        <TFV>10</TFV>
+        <TIA>10</TIA>
+        <TFA>13</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>28</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado62" msdata:rowOrder="21" diffgr:hasChanges="inserted">
+        <ID_Estado>61</ID_Estado>
+        <TIRA>0</TIRA>
+        <TFRA>0</TFRA>
+        <TIV>0</TIV>
+        <TFV>10</TFV>
+        <TIA>10</TIA>
+        <TFA>13</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>29</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado63" msdata:rowOrder="22" diffgr:hasChanges="inserted">
+        <ID_Estado>62</ID_Estado>
+        <TIRA>0</TIRA>
+        <TFRA>0</TFRA>
+        <TIV>0</TIV>
+        <TFV>10</TFV>
+        <TIA>10</TIA>
+        <TFA>13</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>30</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado64" msdata:rowOrder="23" diffgr:hasChanges="inserted">
+        <ID_Estado>63</ID_Estado>
+        <TIRA>0</TIRA>
+        <TFRA>0</TFRA>
+        <TIV>0</TIV>
+        <TFV>10</TFV>
+        <TIA>10</TIA>
+        <TFA>13</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>31</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado65" msdata:rowOrder="24" diffgr:hasChanges="inserted">
+        <ID_Estado>64</ID_Estado>
+        <TIRA>0</TIRA>
+        <TFRA>0</TFRA>
+        <TIV>0</TIV>
+        <TFV>10</TFV>
+        <TIA>10</TIA>
+        <TFA>13</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>32</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado66" msdata:rowOrder="25" diffgr:hasChanges="inserted">
+        <ID_Estado>65</ID_Estado>
+        <TIRA>29</TIRA>
+        <TFRA>29</TFRA>
+        <TIV>29</TIV>
+        <TFV>39</TFV>
+        <TIA>39</TIA>
+        <TFA>42</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>33</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado67" msdata:rowOrder="26" diffgr:hasChanges="inserted">
+        <ID_Estado>66</ID_Estado>
+        <TIRA>2</TIRA>
+        <TFRA>2</TFRA>
+        <TIV>2</TIV>
+        <TFV>39</TFV>
+        <TIA>39</TIA>
+        <TFA>42</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>34</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado68" msdata:rowOrder="27" diffgr:hasChanges="inserted">
+        <ID_Estado>67</ID_Estado>
+        <TIRA>29</TIRA>
+        <TFRA>29</TFRA>
+        <TIV>29</TIV>
+        <TFV>39</TFV>
+        <TIA>39</TIA>
+        <TFA>42</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>35</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado69" msdata:rowOrder="28" diffgr:hasChanges="inserted">
+        <ID_Estado>68</ID_Estado>
+        <TIRA>29</TIRA>
+        <TFRA>29</TFRA>
+        <TIV>29</TIV>
+        <TFV>39</TFV>
+        <TIA>39</TIA>
+        <TFA>42</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>36</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado70" msdata:rowOrder="29" diffgr:hasChanges="inserted">
+        <ID_Estado>69</ID_Estado>
+        <TIRA>29</TIRA>
+        <TFRA>29</TFRA>
+        <TIV>29</TIV>
+        <TFV>39</TFV>
+        <TIA>39</TIA>
+        <TFA>42</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>37</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado71" msdata:rowOrder="30" diffgr:hasChanges="inserted">
+        <ID_Estado>70</ID_Estado>
+        <TIRA>29</TIRA>
+        <TFRA>29</TFRA>
+        <TIV>29</TIV>
+        <TFV>39</TFV>
+        <TIA>39</TIA>
+        <TFA>42</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>38</ID_Grupo>
+      </Estado>
+      <Estado diffgr:id="Estado72" msdata:rowOrder="31" diffgr:hasChanges="inserted">
+        <ID_Estado>71</ID_Estado>
+        <TIRA>29</TIRA>
+        <TFRA>29</TFRA>
+        <TIV>29</TIV>
+        <TFV>39</TFV>
+        <TIA>39</TIA>
+        <TFA>42</TFA>
+        <ID_Plan>212</ID_Plan>
+        <ID_Grupo>39</ID_Grupo>
+      </Estado>
+      <Plan diffgr:id="Plan6" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_Plan>212</ID_Plan>
+        <No>1</No>
+        <Nombre>Plan 1</Nombre>
+        <SS>10</SS>
+        <SC>2</SC>
+        <ID_Estructura>69</ID_Estructura>
+        <DC>90</DC>
+        <MaxVehiculos>40</MaxVehiculos>
+        <Retardo>2</Retardo>
+      </Plan>
+      <Equipo diffgr:id="Equipo2" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_Equipo>10</ID_Equipo>
+        <Cod>3003</Cod>
+        <Nombre>Eq cargado 17/02/2020 9:15:10 a. m.</Nombre>
+        <IP_Central>BAQ.RTS.COM.CO0</IP_Central>
+        <ID_Depto>30</ID_Depto>
+        <ID_Ciudad>76001</ID_Ciudad>
+        <Dir />
+        <ClaveTiempo>0001-01-01T00:00:00-05:00</ClaveTiempo>
+        <MiniCova>false</MiniCova>
+      </Equipo>
+      <HPlan diffgr:id="HPlan9" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_HPlan>8</ID_HPlan>
+        <H_Inicio>2020-02-17T15:35:00-05:00</H_Inicio>
+        <H_Fin>2020-02-17T23:59:00-05:00</H_Fin>
+        <ID_Plan>212</ID_Plan>
+        <Lunes>true</Lunes>
+        <Martes>true</Martes>
+        <Miercoles>true</Miercoles>
+        <Jueves>true</Jueves>
+        <Viernes>true</Viernes>
+        <Sabado>true</Sabado>
+        <Domingo>true</Domingo>
+        <Festivo>true</Festivo>
+      </HPlan>
+      <HPlan diffgr:id="HPlan10" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+        <ID_HPlan>9</ID_HPlan>
+        <H_Inicio>2020-02-17T07:30:00-05:00</H_Inicio>
+        <H_Fin>2020-02-17T17:00:00-05:00</H_Fin>
+        <ID_Plan>212</ID_Plan>
+        <Lunes>true</Lunes>
+        <Martes>true</Martes>
+        <Miercoles>true</Miercoles>
+        <Jueves>true</Jueves>
+        <Viernes>true</Viernes>
+        <Sabado>false</Sabado>
+        <Domingo>false</Domingo>
+        <Festivo>false</Festivo>
+      </HPlan>
+      <TIntermedio diffgr:id="TIntermedio1" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>0</ID_TIntermedio>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>9</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio2" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>1</ID_TIntermedio>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>10</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio3" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>2</ID_TIntermedio>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>11</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio4" msdata:rowOrder="3" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>3</ID_TIntermedio>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>8</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio5" msdata:rowOrder="4" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>4</ID_TIntermedio>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>10</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio6" msdata:rowOrder="5" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>5</ID_TIntermedio>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>11</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio7" msdata:rowOrder="6" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>6</ID_TIntermedio>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>8</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio8" msdata:rowOrder="7" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>7</ID_TIntermedio>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>9</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio9" msdata:rowOrder="8" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>8</ID_TIntermedio>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>11</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio10" msdata:rowOrder="9" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>9</ID_TIntermedio>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>8</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio11" msdata:rowOrder="10" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>10</ID_TIntermedio>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>9</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio12" msdata:rowOrder="11" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>11</ID_TIntermedio>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>10</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio13" msdata:rowOrder="12" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>12</ID_TIntermedio>
+        <ID_Grupo1>12</ID_Grupo1>
+        <ID_Grupo2>8</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio14" msdata:rowOrder="13" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>13</ID_TIntermedio>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>12</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio15" msdata:rowOrder="14" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>14</ID_TIntermedio>
+        <ID_Grupo1>12</ID_Grupo1>
+        <ID_Grupo2>9</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio16" msdata:rowOrder="15" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>15</ID_TIntermedio>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>12</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio17" msdata:rowOrder="16" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>16</ID_TIntermedio>
+        <ID_Grupo1>12</ID_Grupo1>
+        <ID_Grupo2>10</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio18" msdata:rowOrder="17" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>17</ID_TIntermedio>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>12</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio19" msdata:rowOrder="18" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>18</ID_TIntermedio>
+        <ID_Grupo1>12</ID_Grupo1>
+        <ID_Grupo2>11</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio20" msdata:rowOrder="19" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>19</ID_TIntermedio>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>12</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio21" msdata:rowOrder="20" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>20</ID_TIntermedio>
+        <ID_Grupo1>13</ID_Grupo1>
+        <ID_Grupo2>8</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio22" msdata:rowOrder="21" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>21</ID_TIntermedio>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>13</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio23" msdata:rowOrder="22" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>22</ID_TIntermedio>
+        <ID_Grupo1>13</ID_Grupo1>
+        <ID_Grupo2>9</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio24" msdata:rowOrder="23" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>23</ID_TIntermedio>
+        <ID_Grupo1>9</ID_Grupo1>
+        <ID_Grupo2>13</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio25" msdata:rowOrder="24" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>24</ID_TIntermedio>
+        <ID_Grupo1>13</ID_Grupo1>
+        <ID_Grupo2>10</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio26" msdata:rowOrder="25" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>25</ID_TIntermedio>
+        <ID_Grupo1>10</ID_Grupo1>
+        <ID_Grupo2>13</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio27" msdata:rowOrder="26" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>26</ID_TIntermedio>
+        <ID_Grupo1>13</ID_Grupo1>
+        <ID_Grupo2>11</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio28" msdata:rowOrder="27" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>27</ID_TIntermedio>
+        <ID_Grupo1>11</ID_Grupo1>
+        <ID_Grupo2>13</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio29" msdata:rowOrder="28" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>28</ID_TIntermedio>
+        <ID_Grupo1>13</ID_Grupo1>
+        <ID_Grupo2>12</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <TIntermedio diffgr:id="TIntermedio30" msdata:rowOrder="29" diffgr:hasChanges="inserted">
+        <ID_TIntermedio>29</ID_TIntermedio>
+        <ID_Grupo1>12</ID_Grupo1>
+        <ID_Grupo2>13</ID_Grupo2>
+        <Tiempo>6</Tiempo>
+        <BTiempo>true</BTiempo>
+        <ID_Estructura>69</ID_Estructura>
+      </TIntermedio>
+      <Estructura diffgr:id="Estructura2" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_Estructura>69</ID_Estructura>
+        <No>1</No>
+        <Nombre>Estructura 1</Nombre>
+        <TRA>2</TRA>
+        <BTRA>true</BTRA>
+        <TA>3</TA>
+        <BTA>true</BTA>
+        <ID_Cruce>33</ID_Cruce>
+      </Estructura>
+      <Configuracion diffgr:id="Configuracion1" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <Version>2.5</Version>
+      </Configuracion>
+      <GrupoInventario diffgr:id="GrupoInventario1" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>0</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 1 y 2</Grupos>
+        <PrimerGrupo>0</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario2" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>1</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 3 y 4</Grupos>
+        <PrimerGrupo>2</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario3" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>2</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 5 y 6</Grupos>
+        <PrimerGrupo>4</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario4" msdata:rowOrder="3" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>3</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 7 y 8</Grupos>
+        <PrimerGrupo>6</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario5" msdata:rowOrder="4" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>4</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 9 y 10</Grupos>
+        <PrimerGrupo>8</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario6" msdata:rowOrder="5" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>5</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 11 y 12</Grupos>
+        <PrimerGrupo>10</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario7" msdata:rowOrder="6" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>6</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 13 y 14</Grupos>
+        <PrimerGrupo>12</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario8" msdata:rowOrder="7" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>7</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 15 y 16</Grupos>
+        <PrimerGrupo>14</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario9" msdata:rowOrder="8" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>8</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 17 y 18</Grupos>
+        <PrimerGrupo>16</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario10" msdata:rowOrder="9" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>9</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 19 y 20</Grupos>
+        <PrimerGrupo>18</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario11" msdata:rowOrder="10" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>10</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 21 y 22</Grupos>
+        <PrimerGrupo>20</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario12" msdata:rowOrder="11" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>11</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 23 y 24</Grupos>
+        <PrimerGrupo>22</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario13" msdata:rowOrder="12" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>12</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 25 y 26</Grupos>
+        <PrimerGrupo>24</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario14" msdata:rowOrder="13" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>13</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 27 y 28</Grupos>
+        <PrimerGrupo>26</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario15" msdata:rowOrder="14" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>14</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 29 y 30</Grupos>
+        <PrimerGrupo>28</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario16" msdata:rowOrder="15" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>15</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>9</ID_Equipo>
+        <Grupos>Grupos: 31 y 32</Grupos>
+        <PrimerGrupo>30</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario17" msdata:rowOrder="16" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>16</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 1 y 2</Grupos>
+        <PrimerGrupo>0</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario18" msdata:rowOrder="17" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>17</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 3 y 4</Grupos>
+        <PrimerGrupo>2</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario19" msdata:rowOrder="18" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>18</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 5 y 6</Grupos>
+        <PrimerGrupo>4</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario20" msdata:rowOrder="19" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>19</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 7 y 8</Grupos>
+        <PrimerGrupo>6</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario21" msdata:rowOrder="20" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>20</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 9 y 10</Grupos>
+        <PrimerGrupo>8</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario22" msdata:rowOrder="21" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>21</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 11 y 12</Grupos>
+        <PrimerGrupo>10</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario23" msdata:rowOrder="22" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>22</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 13 y 14</Grupos>
+        <PrimerGrupo>12</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario24" msdata:rowOrder="23" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>23</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 15 y 16</Grupos>
+        <PrimerGrupo>14</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario25" msdata:rowOrder="24" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>24</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 17 y 18</Grupos>
+        <PrimerGrupo>16</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario26" msdata:rowOrder="25" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>25</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 19 y 20</Grupos>
+        <PrimerGrupo>18</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario27" msdata:rowOrder="26" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>26</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 21 y 22</Grupos>
+        <PrimerGrupo>20</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario28" msdata:rowOrder="27" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>27</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 23 y 24</Grupos>
+        <PrimerGrupo>22</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario29" msdata:rowOrder="28" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>28</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 25 y 26</Grupos>
+        <PrimerGrupo>24</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario30" msdata:rowOrder="29" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>29</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 27 y 28</Grupos>
+        <PrimerGrupo>26</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario31" msdata:rowOrder="30" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>30</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 29 y 30</Grupos>
+        <PrimerGrupo>28</PrimerGrupo>
+      </GrupoInventario>
+      <GrupoInventario diffgr:id="GrupoInventario32" msdata:rowOrder="31" diffgr:hasChanges="inserted">
+        <ID_Tarjeta>31</ID_Tarjeta>
+        <Presente>false</Presente>
+        <ID_Equipo>10</ID_Equipo>
+        <Grupos>Grupos: 31 y 32</Grupos>
+        <PrimerGrupo>30</PrimerGrupo>
+      </GrupoInventario>
+    </DSCronos>
+  </diffgr:diffgram>
+</DSCronos>
