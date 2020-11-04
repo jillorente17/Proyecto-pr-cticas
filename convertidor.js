@@ -148,22 +148,36 @@ const elJeison = {
             id_depto:"30",
             codigo:"3003"};
             
-
+{/* <GrupoAmigo diffgr:id="GrupoAmigo13" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <ID_GrupoAmigo>12</ID_GrupoAmigo>
+        <ID_Grupo1>8</ID_Grupo1>
+        <ID_Grupo2>10</ID_Grupo2>
+        <ID_Estructura>69</ID_Estructura>
+      </GrupoAmigo> */}
 function save() 
 { 
-let trama= elJeison.cruces.estructuras;
+let trama= elJeison.cruces[0].estructuras[0].grupos_amigos;
+var i =0;
+var j =0;
 console.log(trama);
-// [estructuras].forEach(grupos_amigos ()=>{
-//     var i =0;
-//     console.log(i);
-//     i=i+1;
-// });
+    trama.forEach(StringGruposAmigos =>{
+     grupoAmigo = 
+    '<GrupoAmigo diffgr:id"GrupoAmigo'+(i+1)+'"> msdata:rowOrder="0" diffgr:hasChanges="inserted"'+'\n'+
+    '/n<ID_GrupoAmigo>'+i+'</ID_GrupoAmigos>'+
+    '/n<ID_Grupo1>'+trama.grupo1+'</ID_Grupo1>'+
+    '/n<ID_Grupo2>'+trama.grupo2+'</ID_grupo2>'
+    '</n/GrupoAmigo>'
+    '/nID_Estructura'+j+'</ID_Estructura>'+
+     console.log(i);
+     i=i+1;
+     console.log(grupoAmigo);
+});
 abrirXML='<?xml version=1.0?>'
 abrirXML.toString();
 cronos="<DScronos>"
-documentoCrs=abrirXML+'\n'+cronos;
+documentoCrs=abrirXML+'\n'+cronos+'\n'+grupoAmigo;
 var jsonBlob = new Blob([documentoCrs], { type: 'application/javascript;charset=utf-8' });
 console.log(documentoCrs)
-//saveAs(jsonBlob, testout.json);
+saveAs(jsonBlob, testout.json);
 
 } 
